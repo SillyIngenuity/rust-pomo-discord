@@ -1,0 +1,8 @@
+C:\Users\jason\rust-pomo-discord\target\release\deps\paste-3b1c4fb3280dcb2e.d: C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\lib.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\attr.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\error.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\segment.rs
+
+C:\Users\jason\rust-pomo-discord\target\release\deps\paste-3b1c4fb3280dcb2e.dll: C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\lib.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\attr.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\error.rs C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\segment.rs
+
+C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\lib.rs:
+C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\attr.rs:
+C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\error.rs:
+C:\Users\jason\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\paste-1.0.15\src\segment.rs:
