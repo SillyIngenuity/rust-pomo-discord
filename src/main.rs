@@ -4,7 +4,7 @@ use discord_rich_presence::{activity, DiscordIpc, DiscordIpcClient};
 use ratatui::{backend::CrosstermBackend, layout::*, style::*, widgets::*, Terminal, text::{Line, Span}};
 use rodio::{Decoder, OutputStream, Sink, Source};
 
-const APP_ID: &str = "1459887165784723673";
+const APP_ID: &str = "1516166471623901294";
 const EMBEDDED_SOUND: &[u8] = include_bytes!("../rain-sound.mp3");
 const DEFAULT_ACTS: &[&str] = &["Studying 📚", "Coding 💻", "Deep Work 🧠", "Reading 📖"];
 
@@ -533,7 +533,6 @@ impl App {
     fn on_tick(&mut self) {
         if self.screen != Screen::Timer || self.paused || self.rem == 0 { return; }
         self.rem -= 1;
-        self.save_timer_state();
         if self.rem == 0 {
             let (t, b);
             if self.work {
@@ -552,6 +551,9 @@ impl App {
             }
             if self.notifications_enabled { let _ = notify_rust::Notification::new().summary(t).body(b).show(); }
             self.paused = true; if let Some(s) = &self.sink { s.pause(); }
+        }
+        if self.screen == Screen::Timer {
+            self.save_timer_state();
         }
     }
 }
@@ -982,6 +984,8 @@ fn update_presence(drpc: &mut Option<DiscordIpcClient>, app: &App) {
             let now = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
             p = p.timestamps(activity::Timestamps::new().end((now + app.rem as u64) as i64));
         }
-        let _ = c.set_activity(p);
+        if c.set_activity(p).is_err() {
+            let _ = c.reconnect();
+        }
     }
 }
